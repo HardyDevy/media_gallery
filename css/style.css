@@ -1,0 +1,122 @@
+/*-- Global Styles --*/
+:root {
+  font-size: 18px;
+}
+* {
+  box-sizing: border-box;
+}
+body, section, div, article, aside, h1, h2, h3, h4, h5, h6, p {
+  padding: 0;
+  margin: 0;
+}
+
+/*-- Document Styles --*/
+footer {
+  background-color: #333;
+  color: #ddd;
+  padding: 1em;
+  text-align: center;
+}
+nav {
+  display: flex;
+  justify-content: space-between;
+  background-color: #333;
+  color: #DDD;
+  padding: 1em;
+  flex-direction: column;
+}
+@media screen and (min-width: 768px) {
+  nav {flex-direction: row;}
+}
+nav a {
+  color: #DDD;
+  text-decoration: none;
+}
+.trigram {
+  font-size: 1.75em;
+  display: none;
+}
+@media screen and (max-width: 767px) {
+  .topnav a {display: none;}
+  .topnav a.trigram {display: inherit; align-self: flex-end;}
+}
+@media screen and (max-width: 767px) {
+  .topnav.responsive {align-items: center;}
+  .topnav.responsive a {display:inherit;}
+  .topnav.responsive a.trigram {visibility: hidden; position: absolute; right: 3%; top: 2%;}
+  .topnav.responsive a.trigram::after {content:'\000D7'; visibility:visible; text-indent: -.5em;}
+}
+.grid-container {
+  display: grid;
+  grid-gap: 1em;
+  grid-template-columns: 1fr;
+}
+@media screen and (min-width: 550px) {
+  .grid-container {grid-template-columns: repeat(2, 1fr);}
+}
+@media screen and (min-width: 768px) {
+  .grid-container {grid-template-columns: repeat(3, 1fr);}
+}
+@media screen and (min-width: 990px) {
+  .grid-container {grid-template-columns: repeat(4, 1fr);}
+}
+.card {
+  border: 1px solid #333;
+}
+.card-content {
+  padding: 1em;
+}
+.thumb {
+  background-position: center center;
+  background-size: cover;
+  padding-bottom: 56%;
+}
+.one .thumb {
+  background-image: url('../img/coffee.jpg');
+}
+.two .thumb {
+  background-image: url('../img/coffee.jpg');
+}
+/*--slideshow rules--*/
+.slideshow {
+  width: 100%;
+  margin-bottom: 1em;
+  padding: 1em;
+}
+.slideshow img {
+  width: 100%;
+}
+.slideshow-wrap {
+  position: relative;
+  max-width: 1440px;
+  margin: auto;
+}
+.prev, .next {
+  position: absolute;
+  top: 50%;
+  width: auto;
+  color: #DDD;
+}
+.next {
+  right: 0;
+}
+.prev:hover, .next:hover {
+  background: rgba(0, 0, 0, 0.5);
+}
+.dot-wrap {
+  text-align: center;
+}
+.dot {
+  width: 20%;
+  opacity: .5;
+  display: inline-block;
+}
+.dot img {
+  width: 100%;
+}
+.dot.active {
+  opacity: 1;
+}
+
+
+/*-*/
