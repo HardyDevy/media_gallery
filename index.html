@@ -1,160 +1,55 @@
 <!DOCTYPE html>
-<html lang="en-US">
-  <head>
-    <meta charset="utf-8">
-    <meta https-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>eg_media-gallery-alt</title>
-    <link rel="stylesheet" href="css/sanitize.css">
-    <link rel="stylesheet" href="css/style.css">
-  </head>
-  <body>
-    <nav class="topnav" id="main-nav">
-      <a href="#" class="nav-links">One</a>
-      <a href="#" class="nav-links">Two</a>
-      <a href="#" class="nav-links">Three</a>
-      <a href="#" class="nav-links">Four</a>
-      <a href="#" class="nav-links">Five</a>
-      <a href="javascript:void(0);" class="nav-link trigram" onclick="navToggle()">&#9776;</a>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Media Starter</title>
+  <link rel="stylesheet" href="css/modnorm.min.css">
+  <link rel="stylesheet" href="css/style.css">
+  <!-- <link rel="stylesheet" href="css/nocom.css"> -->
+</head>
+<body>
+  <header class="top-nav">
+    <a href="#" class="nav-link logo">Site&nbsp;Title</a>
+    <nav id="site-nav" class="nav-wrap">
+      <a href="#" class="nav-link">News</a>
+      <a href="#" class="nav-link">About</a>
+      <a href="#" class="nav-link">Specials</a>
+      <a href="#" class="nav-link">Contact</a>
     </nav>
+    <a href="#" class="nav-link" id="trigram" onclick="navToggle()"></a>
+  </header>
+  <main>
     <section class="slideshow">
-      <div class="slideshow-wrap">
-
-        <div class="slide fade">
-          <img src="https://picsum.photos/1280/448/?image=12" alt="slide one" >
-          <p class="caption">Lorem ipsum dolot sit SLIDE ONE</p>
-        </div><!--end.slide-->
-
-        <div class="slide fade">
-          <img src="https://picsum.photos/1280/448/?image=13" alt="slide two" >
-          <p class="caption">Lorem ipsum dolot sit SLIDE TWO</p>
-        </div><!--end.slide-->
-
-        <div class="slide fade">
-          <img src="https://picsum.photos/1280/448/?image=15" alt="slide three" >
-          <p class="caption">Lorem ipsum dolot sit SLIDE THREE</p>
-        </div><!--end.slide-->
-
-        <div class="slide fade">
-          <img src="https://picsum.photos/1280/448/?image=17" alt="slide four" >
-          <p class="caption">Lorem ipsum dolot sit SLIDE FOUR</p>
-        </div><!--end.slide-->
-
-        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-        <a class="next" onclick="plusSlides(1)">&#10095;</a>
-
-      </div><!--end.slideshow-wrap-->
-
-      <div class="dot-wrap">
-        <span class="dot" onclick="currentSlide(1)"><img src="https://picsum.photos/1280/448/?image=12" alt="slide one" ></span>
-        <span class="dot" onclick="currentSlide(2)"><img src="https://picsum.photos/1280/448/?image=13" alt="slide one" ></span>
-        <span class="dot" onclick="currentSlide(3)"><img src="https://picsum.photos/1280/448/?image=15" alt="slide one" ></span>
-        <span class="dot" onclick="currentSlide(4)"><img src="https://picsum.photos/1280/448/?image=17" alt="slide one" ></span>
+      <!--slider goes here-->
+      <h2>slideshow here</h2>
+      <div class="controls">
+        <button>&#8249;</button>
+        <button>&#8250;</button>
       </div>
-
+    </section>
+    <section class="hero">
+      <h2>Images from <em>Lorem Picsum</em></h2>
+      <p>Visit <a href="https://picsum.photos/">that site</a> to learn how to use them.</p>
+    </section>
+    <section class="grid-cont">
+      <article class="card">
+        <!-- <img src="https://picsum.photos/480/320?grayscale&random=1" alt="alt-text reads . . ."> -->
+        <h4>Heading for a bit</h4>
+        <p>Purus semper eget duis at tellus at urna condimentum mattis pellentesque id nibh tortor id aliquet lectus proin nibh nisl condimentum id venenatis a condimentum</p>
+        <button onclick="sampleFunction()">Click</button><!--when clicked, the function runs-->
+      </article><!--end article.card-->
+      
+      <!--
+        add more article.cards inside this section
+      -->
 
     </section>
-    <article class="grid-container">
-      <div class="card one">
-        <div class="thumb"></div><hr>
-        <div class="card-content">
-          <h3>Card Title</h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-          <button class="more">More</button>
-        </div><!--end .content-->
-      </div><!--end .card-->
-      <div class="card two">
-        <div class="thumb"></div><hr>
-        <div class="card-content">
-          <h3>Card Title</h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-          <button class="more">More</button>
-        </div><!--end .content-->
-      </div><!--end .card-->
-      <div class="card three">
-        <div class="thumb"></div><hr>
-        <div class="card-content">
-          <h3>Card Title</h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-          <button class="more">More</button>
-        </div><!--end .content-->
-      </div><!--end .card-->
-      <div class="card four">
-        <div class="thumb"></div><hr>
-        <div class="card-content">
-          <h3>Card Title</h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-          <button class="more">More</button>
-        </div><!--end .content-->
-      </div><!--end .card-->
-      <div class="card five">
-        <div class="thumb"></div><hr>
-        <div class="card-content">
-          <h3>Card Title</h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-          <button class="more">More</button>
-        </div><!--end .content-->
-      </div><!--end .card-->
-      <div class="card six">
-        <div class="thumb"></div><hr>
-        <div class="card-content">
-          <h3>Card Title</h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-          <button class="more">More</button>
-        </div><!--end .content-->
-      </div><!--end .card-->
-      <div class="card seven">
-        <div class="thumb"></div><hr>
-        <div class="card-content">
-          <h3>Card Title</h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-          <button class="more">More</button>
-        </div><!--end .content-->
-      </div><!--end .card-->
-      <div class="card eight">
-        <div class="thumb"></div><hr>
-        <div class="card-content">
-          <h3>Card Title</h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-          <button class="more">More</button>
-        </div><!--end .content-->
-      </div><!--end .card-->
-      <div class="card nine">
-        <div class="thumb"></div><hr>
-        <div class="card-content">
-          <h3>Card Title</h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-          <button class="more">More</button>
-        </div><!--end .content-->
-      </div><!--end .card-->
-      <div class="card ten">
-        <div class="thumb"></div><hr>
-        <div class="card-content">
-          <h3>Card Title</h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-          <button class="more">More</button>
-        </div><!--end .content-->
-      </div><!--end .card-->
-      <div class="card eleven">
-        <div class="thumb"></div><hr>
-        <div class="card-content">
-          <h3>Card Title</h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-          <button class="more">More</button>
-        </div><!--end .content-->
-      </div><!--end .card-->
-      <div class="card twelve">
-        <div class="thumb"></div><hr>
-        <div class="card-content">
-          <h3>Card Title</h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-          <button class="more">More</button>
-        </div><!--end .content-->
-      </div><!--end .card-->
-    </article>
-    <footer>
-      <p>&copy; 2019, Eric York</p>
-    </footer>
-    <script src="js/page.js"></script>
-  </body>
+  </main>
+  <footer>
+    <p>&copy;2022 Your Name</p>
+  </footer>
+  <script src="js/page.js"></script>
+</body>
 </html>
