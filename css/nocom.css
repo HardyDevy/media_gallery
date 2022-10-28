@@ -22,7 +22,7 @@ h4 {
 
 header.top-nav { 
   background-color: var(--dark); 
-  padding: 1rem 2rem 1rem 0; 
+  padding: 1rem 3rem 1rem 0; 
   display: flex; 
   min-height: 8rem; 
   justify-content: space-between; 
@@ -120,19 +120,20 @@ main {
 }
 @media screen and (min-width: 550px) { 
   .grid-cont {grid-template-columns: repeat(2, 1fr);}
-  
 }
 @media screen and (min-width: 768px) { 
-  .grid-cont {grid-template-columns: repeat(2, 1fr);}
-  
-}
-@media screen and (min-width: 1280px) { 
   .grid-cont {grid-template-columns: repeat(3, 1fr);}
-  
 }
-@media screen and (min-width: 1440px) { 
+@media screen and (min-width: 1080px) { 
   .grid-cont {grid-template-columns: repeat(4, 1fr);}
-  
+}
+
+
+@media screen and (max-width: 550px) { 
+  nav {display: none;}
+}
+@media screen and (max-width: 768px) { 
+  nav {display: none;}
 }
 .card { 
   padding: 5%; 
