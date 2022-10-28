@@ -120,6 +120,7 @@ main {
 }
 @media screen and (min-width: 550px) { 
   .grid-cont {grid-template-columns: repeat(2, 1fr);}
+  .topnav {display: flex; flex-direction: row; justify-content: space-between;}
 }
 @media screen and (min-width: 768px) { 
   .grid-cont {grid-template-columns: repeat(3, 1fr);}
@@ -128,12 +129,17 @@ main {
   .grid-cont {grid-template-columns: repeat(4, 1fr);}
 }
 
-
-@media screen and (max-width: 550px) { 
-  nav {display: none;}
-}
 @media screen and (max-width: 768px) { 
-  nav {display: none;}
+  .nav-wrap {display: none;}
+  .top-nav a.trigram {display:inherit; position:absolute; right:4%; font-size:2em; padding: .25em; background:var(--prime);}
+  .top-nav {display: flex; flex-direction: row; justify-content: space-between;}
+  a#trigram {display: flex; flex-direction: row; justify-content: space-between;}
+  .top-nav.responsive a:first-child {margin-top:1em;}
+  .top-nav.responsive a, .top-nav.responsive .nav-wrap {display:flex; flex-direction: column; text-align: center; margin-top: 1rem;}
+  .top-nav.responsive {display: flex; flex-direction: column; align-items: center; text-align: center;}
+  .top-nav.responsive a#trigram {visibility:hidden; transition:none;}
+  .top-nav.responsive a#trigram:after {content:'\000D7'; visibility: visible; text-indent: -.65em; font-size: 3em;}
+
 }
 .card { 
   padding: 5%; 
