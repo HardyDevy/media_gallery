@@ -7,7 +7,7 @@
 }
 body {
   color: var(--light); 
-  background-color: var(--dkmid);
+  background-color: var(--dark);
   line-height: 1.4; 
 }
 
@@ -21,10 +21,10 @@ h4 {
 }
 
 header.top-nav { 
-  background-color: var(--dark); 
+  background-color: var(--verylight); 
   padding: 1rem 3rem 1rem 0; 
   display: flex; 
-  min-height: 8rem; 
+  min-height: 6rem; 
   justify-content: space-between; 
   align-items: center; 
   position: relative; 
@@ -36,7 +36,7 @@ nav {
 }
 a.nav-link { 
   padding-left: 2.8rem; 
-  color: var(--light); 
+  color: var(--dark); 
   font-weight: 500; 
   text-decoration: none; 
   transition: all .2s ease-in-out; 
@@ -59,20 +59,83 @@ a#trigram::before {
   right: 0; 
 }
 main {
-  padding: 4rem 4rem; 
+  padding: 2rem 4rem; 
 }
 .darkText {
   color: var(--dark);
 }
-.slideshow { 
-  display: flex; 
-  justify-content: center; 
-  align-items: center; 
-  height: 57rem; 
-  border-radius: 8px; 
-  background-color: var(--verylight); 
-  color: var(--dkmid); 
-  position: relative; 
+.slideshow {
+  background-color: var(--light);
+  border-radius: rpx;
+  padding: 1em;
+}
+.slideshow-wrapper {
+  position: relative;
+  margin: auto;
+  max-width: 100%;
+}
+.slideshow-wrapper img {
+  width: 100%;
+}
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.8s ease;
+  border-radius: 0 5px 5px 0;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+.captiontext {
+  background: rgba(0,0,0,0.4);
+  color: #f2f2f2;
+  font-size: 22px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 5px;
+  width: 100%;
+  text-align: center;
+}
+.numberof {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+.text-center {
+  display: flex;
+}
+.indicator {
+  cursor:pointer;
+  height: auto;
+  width: 25%;
+  margin: 0 2px;
+  background-color: #bbb;
+  display: inline-block;
+  transition: all 250ms ease-in-out;
+  opacity: .5;
+}
+.indicator img {
+  width: 100% !important;
+}
+.active, .indicator:hover {
+  opacity: 1;
 }
 .controls button { 
   cursor: pointer; 
@@ -139,6 +202,8 @@ main {
   .top-nav.responsive {display: flex; flex-direction: column; align-items: center; text-align: center;}
   .top-nav.responsive a#trigram {visibility:hidden; transition:none;}
   .top-nav.responsive a#trigram:after {content:'\000D7'; visibility: visible; text-indent: -.65em; font-size: 3em;}
+  .slideshow {display: none;}
+  .grid-cont {padding-top: 0;}
 
 }
 .card { 
