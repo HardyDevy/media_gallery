@@ -123,27 +123,8 @@ main {
 @media screen and (min-width: 1440px) { /*-- at the largest sizes, there are four equal columns --*/
   .grid-cont {grid-template-columns: repeat(4, 1fr);}
 }
-.card { /*-- selects .card elements --*/
-  padding: 2%; /*-- a little bit of flexible space inside the card --*/
-  display: flex; /*-- card is a flex container --*/
-  flex-direction: column; /*-- flow is downward --*/
-  border-radius: 8px; /*-- curved edges --*/
-  border: 2px dashed var(--dkmid); /*-- dashed border --*/
-  background-color: var(--light); /*-- a little bit of light color --*/
-}
-.card img { /*-- selects image children of .card --*/
-  width: 100%; /*-- full width of container --*/
-  height: auto; /*-- maintain aspect ratio --*/
-  max-height: 320px; /*-- can't be too tall --*/
-  border-radius: 8px 8px 0 0; /*-- curved corners, but just on the top --*/
-}
-.card button { /*-- selects button children of .card elements --*/
-  width: 30%; /*-- 1/3rd width of parent (the .card) --*/
-  min-width: 6rem; /*-- can't be too narrow --*/
-  margin: 2rem auto; /*-- centered it --*/
-  padding: 1rem 2rem; /*-- makes space inside the button --*/
-  cursor: pointer; /*-- changes the mouse cursor from arrow to pointer --*/
-}
+
+
 footer { /*-- just some footer styles, nothing weird --*/
   margin-top: 2rem; /*-- adds space above --*/
   background-color: var(--ltmid); /*-- light mid color --*/

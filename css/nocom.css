@@ -2,6 +2,7 @@
   --light: rgb(234, 234, 234);
   --dark: rgb(40, 37, 37);
   --dkmid: rgb(208, 208, 208);
+  --otherdk: rgb(95, 95, 95);
   --verylight: #F9F9F9;
   --accent: #6495ed;
 }
@@ -10,6 +11,11 @@ body {
   background-color: var(--dark);
   line-height: 1.4; 
 }
+hr {
+  height: 0;
+  overflow: visible;
+  color: var(--dark);
+}
 
 a {color: var(--accent); font-weight: 500; text-decoration: none; transition: all .2s ease-in-out;}
 a:visited {color:#305eb3;}
@@ -17,8 +23,23 @@ a:hover {color: var(--accent);}
 a:active {color: var(--dkmid);}
 
 h4 {
+  font-weight: bold;
   margin-bottom: 0;
 }
+.modal-title {
+  font-size: larger;
+  font-weight: bold;
+  color: var(--dark);
+}
+p {
+  font-size: 11pt;
+  color: var(--otherdk);
+}
+.modal-text {
+  font-size: medium;
+  color: var(--otherdk);
+}
+
 
 header.top-nav { 
   background-color: var(--verylight); 
@@ -176,7 +197,8 @@ main {
   padding: 0; 
 }
 .grid-cont { 
-  padding: 7rem 0; 
+  padding-top: 7rem; 
+  padding-bottom: 1rem;
   display: grid; 
   grid-gap: 2rem; 
   grid-template-columns: 1fr; 
@@ -228,6 +250,91 @@ main {
   cursor: pointer; 
   border: none;
 }
+.card-content {
+  margin-bottom: 2rem;
+  height: 12rem;
+}
+
+/*-- Modal Styles --*/
+/* The Modal (background) */
+.modal {
+  display: none;/*-- hidden by default --*/
+  position: fixed; /*-- doesn't move on the screen --*/
+  z-index: 1100; /*-- sets higher than anything else so modal is in the very front --*/
+  left: 0; /*-- positions at zero pixels from the left --*/
+  top: 0; /*-- positions at zero pixels from the top --*/
+  width: 100%; /*-- fills the space --*/
+  height: 100%; /*-- fills the space --*/
+  overflow: auto; /*-- handles overflow as normal. --*/
+  background-color: rgba(10, 10, 10, .4); /*--slightly transparent--*/
+}
+.modal-content {
+  background-color: var(--verylight);
+  color: var(--text);
+  margin: 1rem auto;
+  padding: 1em;
+  width: 92%;
+  border-radius: 4px;
+  animation: fadein .3s ease-in-out; /*-- sets animation properties: name, duration, easing --*/
+}
+@keyframes fadein {
+ from{transform:scale(.1);} /*-- modal grows from very small to full size--*/
+}
+.close {
+  color: var(--text);
+  font-size: 2.5em;
+  font-weight: bold;
+  position: absolute; /*-- always at the top right of the modal --*/
+  top: 5px;
+  right: 4.25%;
+  transition: all .2s ease-in;
+  text-shadow: 2px 2px 5px #FAFAFA,
+              -2px -2px 5px #FAFAFA,
+              2px -2px 5px #FAFAFA,
+              -2px 2px 5px #FAFAFA;
+}
+.close:hover,
+.close:focus {
+  color: var(--accent);
+  text-decoration: none;
+  cursor: pointer;
+}
+.modal-body {
+ display: grid;
+ grid-template-columns: 1fr; /*-- default modal grid (for mobile screens)--*/
+ grid-gap: 2em;
+}
+.modal-text {
+ align-self: center;
+ font-size: large !important;
+}
+.modal-body img {
+ margin-bottom: 1.5em;
+ width: 100%;
+ height: auto;
+}
+@media screen and (min-width: 1280px) { /*-- better modal display on largest screens --*/
+ .modal-body {grid-template-columns: 7fr 5fr;}
+
+}
+
+.thumb {
+  padding-bottom: 56%; /*-- creates ~16:9 ratio--*/
+  background-size: cover; /*--sets image to cover background --*/
+  background-position: center center; /*-- positions image horiz. and vert. center --*/
+  border-radius: 4px 4px 0 0; /*-- rounds top-left and top-right edges --*/
+}
+/*-- Card Backgrounds --*/
+.one .thumb {background-image: url('https://picsum.photos/300/200/?image=60');}
+.two .thumb {background-image: url('https://picsum.photos/300/200/?image=61');}
+.three .thumb {background-image: url('https://picsum.photos/300/200/?image=62');}
+.four .thumb {background-image: url('https://picsum.photos/300/200/?image=63');}
+.five .thumb {background-image: url('https://picsum.photos/300/200/?image=64');}
+.six .thumb {background-image: url('https://picsum.photos/300/200/?image=65');}
+.seven .thumb {background-image: url('https://picsum.photos/300/200/?image=66');}
+.eight .thumb {background-image: url('https://picsum.photos/300/200/?image=67');}
+/*----*/
+
 footer { 
   margin-top: 2rem; 
   background-color: var(--dark); 
