@@ -15,9 +15,7 @@ function navToggle() {
 
 // Slideshow Functions
 var slideIndex = 1; // creates a new variable, names it slideIndex, and sets it = to 1
-
 showSlides(slideIndex); // uses the index variable as the parameter of the showSlides function
-
 function plusSlides(n) { // function for incrementing (adding to) slideIndex, takes n as its parameter
   showSlides(slideIndex += n); // function runs showSlides with index + n as its parameter
 }
